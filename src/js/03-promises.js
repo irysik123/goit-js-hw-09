@@ -18,7 +18,7 @@ function onSubmitForm(event) {
   event.target.elements.delay.disabled = true;
   event.target.elements.step.disabled = true;
 
-  for (i = 1; i <= amount; i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
